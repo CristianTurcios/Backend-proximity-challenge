@@ -1,0 +1,121 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "AutoFi Api",
+        "description": "Documentation for AutoFi Api",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:5000",
+    "basePath": "/",
+    "tags": [{
+        "name": "uploadCsv",
+        "description": "API for upload csv in the system and retrieve the data"
+    }],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/api/v1/uploadCsv": {
+            "parameters": [{
+                    "name": "provider",
+                    "in": "formData",
+                    "required": true,
+                    "description": "provider identifier",
+                    "type": "string",
+                    "example": "Copart"
+                },
+                {
+                    "name": "file",
+                    "in": "formData",
+                    "required": true,
+                    "description": "file that contains the records that are going to be store in database",
+                    "type": "file"
+                }
+            ],
+            "post": {
+                "tags": [
+                    "uploadCsv"
+                ],
+                "consumes": "multipart/form-data",
+                "summary": "Store records in database system",
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/api/v1/getData": {
+            "parameters": [{
+                "name": "provider",
+                "in": "query",
+                "required": false,
+                "description": "provider identifier",
+                "type": "string"
+            }],
+            "get": {
+                "tags": [
+                    "uploadCsv"
+                ],
+                "summary": "Get all records in database system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Car"
+                        }
+                    }
+                }
+            }
+        }   
+    },
+    "definitions": {
+        "Car": {
+            "required": [
+                "provider",
+                "uuid",
+                "vin",
+                "make",
+                "model:",
+                "mileage",
+                "year",
+                "price",
+                "zipCode",
+                "createDate",
+                "updateDate"
+            ],
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "provider": { "type": "string" },
+                            "uuid": {  "type": "string" },
+                            "vin": {  "type": "string" },
+                            "make": { "type": "string" },
+                            "model": { "type": "string" },
+                            "mileage": { "type": "string" },
+                            "year": { "type": "string" },
+                            "price": { "type": "string" },
+                            "zipCode": { "type": "string" },
+                            "createDate": { "type": "string" },
+                            "updateDate": { "type": "string" }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
