@@ -25,3 +25,11 @@ $ npm run start
 
 When the project is configured and running successfully you can find the API documentation that was written using swagger by putting this URL in your web browser:
 <http://localhost:5000/api-docs/>
+
+### Swagger Documentation Screenshots
+
+![Swagger Documentation](src/files/Swagger_Documentation.png)
+
+![Swagger GET Documentation](src/files/Swagger_GET_Documentation.png)
+
+![Swagger GET Documentation](src/files/Swagger_POST_Documentation.png)
