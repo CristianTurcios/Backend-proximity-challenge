@@ -1,29 +1,55 @@
 # BackEnd Proximity Challenge
 
+## Technologies
+
+- TypeScript
+- Swagger
+- ExpressJs
+- Jest
+- Multer
+- Mongo
+- Mongoose
+- Joi
+- nodemon
+- eslint - airbnb style
+- Travis CI
+
 ## Installation
 
-  Type the following command in your cmd.
+## Installation
 
-```sh
-
-$ git clone git@github.com:CristianTurcios/backEnd-proximity-challenge.git
-
-$ cd backEnd-proximity-challenge
-
+```bash
 $ npm install
-
-$ npm run start
-
 ```
+
+## Running the app
+
+```bash
+# development
+$ npm run start
+```
+
+## Test
+
+```bash
+# unit tests
+$ npm run test
+```
+
+## Swagger Documentation
+
+```bash
+# unit tests
+$ npm run start
+```
+
+Open a new tab in your web browser and put this url: <http://localhost:5000/api-docs/>
 
 ### **NOTE**
 
 - You can find an example of the file to upload in the api post method, inside the `files/dummyData.csv` folder.
 - You can use and import this [collection](https://www.getpostman.com/collections/e0837523b9e4f8a2a62f) from POSTMAN to be able to test the api
-
-### **Documentation**
-
-When the project is configured and running successfully you can find the API documentation that was written using swagger by putting this URL in your web browser:
+- When the project is configured and running successfully you can find the API documentation that was written using swagger by putting this URL in your web browser:
 <http://localhost:5000/api-docs/>
 
 ### Swagger Documentation Screenshots
