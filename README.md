@@ -1,4 +1,4 @@
-# BackEnd Proximity Challenge
+# Backend Proximity Challenge [![Build Status](https://travis-ci.org/CristianTurcios/Backend-proximity-challenge.svg?branch=master)](https://travis-ci.org/CristianTurcios/Backend-proximity-challenge)
 
 ## Technologies
 
@@ -13,8 +13,6 @@
 - nodemon
 - eslint - airbnb style
 - Travis CI
-
-## Installation
 
 ## Installation
 
@@ -39,7 +37,7 @@ $ npm run test
 ## Swagger Documentation
 
 ```bash
-# unit tests
+# Swagger Documentation
 $ npm run start
 ```
 
